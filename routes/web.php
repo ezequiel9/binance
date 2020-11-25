@@ -14,5 +14,14 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return 'Silence is gold...';
 });
+
+$router->group(['prefix' => 'api'], function () use ($router) {
+    $router->get('data', ['uses' => 'BinanceController@getData']);
+});
+
+
+
+
+
