@@ -10,6 +10,11 @@ class Binance extends Model
 {
     protected $table = 'assets';
 
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
+
     protected $fillable = [
         'binanceId',
         'assetCode',

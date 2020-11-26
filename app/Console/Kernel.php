@@ -2,7 +2,9 @@
 
 namespace App\Console;
 
+use App\Console\Commands\DetectNewAssets;
 use Illuminate\Console\Scheduling\Schedule;
+use Illuminate\Support\Facades\Artisan;
 use Laravel\Lumen\Console\Kernel as ConsoleKernel;
 
 class Kernel extends ConsoleKernel
@@ -13,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        DetectNewAssets::class
     ];
 
     /**
@@ -24,6 +26,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        //
+        //$schedule->command(Artisan::call('binance:detect'))->everyMinute();
     }
 }

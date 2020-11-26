@@ -65,28 +65,14 @@ class BinanceController extends Controller
                             ->where('assetCode', $asset->assetCode)
                             ->create($loopAsset);
                     }
-
-
-//                    foreach ($assetFields as $assetField) {
-//                        if (array_key_exists($assetField, (array) $asset)) {
-//                            $loopAsset[$assetField] = $asset->$assetField;
-//                        }
-//                    }
-//                    if (!empty($loopAsset)) {
-//                        $parseAssets[] = $loopAsset;
-//                    }
                 }
             }
 
-
-            dd($newAssets);
-
+//            return Binance::query()->inRandomOrder()->limit(1)->get();
+            return $newAssets;
 
         } catch (\Exception $e) {
-
             dump($e->getMessage());
         }
     }
-
-    //
 }
