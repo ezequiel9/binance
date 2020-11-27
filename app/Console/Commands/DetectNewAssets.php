@@ -78,6 +78,8 @@ class DetectNewAssets extends Command
             $this->error("An error occurred");
 
         }
+
+	//SlackHelper::notifySlack('eh put', true);
     }
 
     private function detect()
