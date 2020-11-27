@@ -27,6 +27,5 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
     	$schedule->command('binance:detect')->everyMinute();
-	//$schedule->command(Artisan::call('binance:detect'))->everyMinute();
     }
 }
